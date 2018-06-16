@@ -24,7 +24,7 @@ if(!isset($_SESSION["nombre"])) {
 </select>
 <br /> 
 <br /> 	
-	<label >CANTIDAD DE PASAJEROS : </label>
+	<label >CANTIDAD DE PASAJEROS: </label>
 <select class="form-control" id="canal"  name="canal"  autofocus required>
 	<option selected value=""> Elige una opción </option>
 	<option value="ANUNCIO FACEBOOK">ANUNCIO FACEBOOK</option> 
