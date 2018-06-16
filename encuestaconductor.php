@@ -36,10 +36,10 @@ if(!isset($_SESSION["nombre"])) {
 </select>
 <br /> 
 <br /> 
-    <label >TIEMPO:  </label>
+    <label >TIEMPO DE RECORRIDO ASIGNADO:  </label>
 <select class="form-control" id="tienda"  name="tienda"   required>
 	<option selected value=""> Elige una opción </option>
-	<option value="...">...</option> 
+	<option value="Suficiente">Suficientee</option> 
 	<option value="...">...</option> 
 	<option value="...">...</option> 
 	<option value="...">...</option> 
