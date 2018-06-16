@@ -11,7 +11,7 @@ if(!isset($_SESSION["nombre"])) {
 	<h2>Bienvenido <?php echo $_SESSION["nombre"]?> <span> </span></h2>
 	<p>Finalice sesion <a  href="index.php">¡ aqui!</a></p>
 	
-	<label >RUTA : </label>
+	<label >RUTA: </label>
 <select class="form-control" id="canal"  name="canal"  autofocus required>
 	<option selected value=""> Elige una opción </option>
 	<option value="P500">P500</option> 
@@ -36,7 +36,7 @@ if(!isset($_SESSION["nombre"])) {
 </select>
 <br /> 
 <br /> 
-    <label >TIEMPO :  </label>
+    <label >TIEMPO:  </label>
 <select class="form-control" id="tienda"  name="tienda"   required>
 	<option selected value=""> Elige una opción </option>
 	<option value="...">...</option> 
