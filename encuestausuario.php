@@ -9,6 +9,7 @@ if(!isset($_SESSION["nombre"])) {
     <img src="imagenes/sitp.jpg" style="max-width:15%;width:auto;height:auto;">
     <img src="imagenes/PASAJERO.jpg"  style="max-width:10%;width:30;height:30;">
 	<h2>Bienvenido <?php echo $_SESSION["nombre"]?> <span> </span></h2>
+	<?php include("menu.php"); ?>
 	<p>Finalice sesion <a  href="index.php">¡ aqui!</a></p>
 	
 	<label >RUTA: </label>
