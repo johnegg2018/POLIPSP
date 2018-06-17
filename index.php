@@ -12,11 +12,11 @@ include("includes/header.php");
 <form name="loginform" id="loginform" action="includes/validaexisteusuario.php" method="POST">
     <p>
         <label for="user_login">Nombre De Usuario<br />
-        <input type="text" name="usuario" id="usuario" class="input" value=""  size="10" required /></label>
+        <input type="text" name="usuario" id="usuario" class="input form-control" value=""  size="18" required /></label>
     </p>
     <p>
         <label for="user_pass">Contraseña<br />
-        <input type="password" name="password" id="password" class="input" value="" size="8" required></label>
+        <input type="password" name="password" id="password" class="input form-control" value="" size="18" required></label>
     </p>
         <p class="submit">
         <input type="submit" name="login" class="button" value="Ingrese" />
