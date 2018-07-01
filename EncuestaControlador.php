@@ -15,13 +15,14 @@ if (! isset ( $_SESSION ["nombre"] )) {
 </div>
 <div class="container">
 	<p>
-		Finalice sesion <a href="index.php">¡ aqui!</a>
+		<a href="index.php" class="btn btn-info" role="button">Cerrar Sesión</a>
+		<a href="./CuentaCliente.php" title="Regresar" class="btn btn-info" role="button">Regresar</a>
 	</p>
 	<form method="post"
 		action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		<label>RUTA: </label> <select class="form-control" id="canal"
 			name="canal" autofocus required>
-			<option selected value="">Elige una opción</option>
+			<option selected value="">Elige una opci&oacute;n</option>
 			<option value="P500">P500</option>
 			<option value="SE10">SE10</option>
 			<option value="142">142</option>
@@ -29,6 +30,14 @@ if (! isset ( $_SESSION ["nombre"] )) {
 			<option value="T11">T11</option>
 			<option value="P49">P49</option>
 			<option value="736">736</option>
+			<option value="C15">C15</option>
+			<option value="TC11">TC11</option>
+			<option value="T163">T163</option>
+			<option value="552">552</option>
+			<option value="C31">C31</option>
+			<option value="T91">T91</option>
+			<option value="330">330</option>
+			<option value="210">210</option>
 		</select> <br /> <br /> <label>¿El tiempo de recorrido en general
 			asignado para la ruta es el adecuado? </label> <select
 			class="form-control" id="tienda" name="tienda" required>
@@ -45,10 +54,10 @@ if (! isset ( $_SESSION ["nombre"] )) {
 			atienden todas las paradas?: </label> <select class="form-control"
 			id="tienda" name="tienda" required>
 			<option selected value="">Elige una opción</option>
-			<option value="Todos">Todos:</option>
-			<option value="La mayor parte">La mayor parte;</option>
-			<option value="Solo unos pocos">Solo unos pocos</option>
-			<option value="Ninguno">Ninguno</option>
+			<option value="0">Todos</option>
+			<option value="1">La mayor parte</option>
+			<option value="2">Solo unos pocos</option>
+			<option value="3">Ninguno</option>
 		</select> <br /> <br /> <label>¿La ruta tiene saltos en los tiempos no
 			programados que hacen cambiar la velocidad en la operación? </label>
 		<select class="form-control" id="tienda" name="tienda" required>
@@ -63,8 +72,10 @@ if (! isset ( $_SESSION ["nombre"] )) {
 			<option value="NO">No</option>
 			<option value="Algunas veces">Algunas veces</option>
 			<br>
-		</select> <br> <input class="btn btn-primary" type="submit"
-			name="submit" value="Enviar">
+		</select> <br> 
+		<input class="btn btn-primary" type="submit" name="submit" value="Enviar">
+		<a href="./CuentaCliente.php" title="Regresar" class="btn btn-info" role="button">Regresar</a>
+		<br>
 	</form>
 </div>
 <div class="container">

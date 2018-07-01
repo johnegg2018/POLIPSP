@@ -8,7 +8,7 @@ if(!isset($_SESSION["nombre"])) {
 <div id="welcome">	
     <img src="imagenes/sitp.jpg" style="max-width:15%;width:auto;height:auto;">
 	<h2>Bienvenido <?php echo $_SESSION["nombre"]?> <span> </span></h2>
-	<p>Finalice sesion <a  href="index.php">¡ aqui!</a></p>
+	<a href="index.php" class="btn btn-info" role="button">Cerrar Sesión</a><br><br>
 	<?php include("menu.php"); ?>
 	<img src="imagenes/SITPP.jpg" style="max-width:200%;width:863px;height:350px;">
 	<br><br><br><br>

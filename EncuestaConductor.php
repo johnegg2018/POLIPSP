@@ -12,12 +12,13 @@ if (! isset ( $_SESSION ["nombre"] )) {
 	<h2>Bienvenido <?php echo $_SESSION["nombre"]?> <span> </span></h2>
 <div class="container">
 	<p>
-		Finalice sesion <a href="index.php">¡ aqui!</a>
+		<a href="index.php" class="btn btn-info" role="button">Cerrar Sesión</a>
+		<a href="./CuentaCliente.php" title="Regresar" class="btn btn-info" role="button">Regresar</a>
 	</p>
 	<form method="post"
 		action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-		<label>RUTA: </label> <select class="input form-control" id="canal" name="canal" autofocus required>
-			<option selected value="">Elige una opción</option>
+		<label>RUTA: </label> <select class="form-control" id="canal" name="canal" autofocus required>
+			<option selected value="">Elige una opci&oacute;n</option>
 			<option value="P500">P500</option>
 			<option value="SE10">SE10</option>
 			<option value="142">142</option>
@@ -25,26 +26,34 @@ if (! isset ( $_SESSION ["nombre"] )) {
 			<option value="T11">T11</option>
 			<option value="P49">P49</option>
 			<option value="736">736</option>
+			<option value="C15">C15</option>
+			<option value="TC11">TC11</option>
+			<option value="T163">T163</option>
+			<option value="552">552</option>
+			<option value="C31">C31</option>
+			<option value="T91">T91</option>
+			<option value="330">330</option>
+			<option value="210">210</option>
 		</select> <br /> <br /> <label>CANTIDAD DE PASAJEROS: </label> <select
 			class="form-control" id="canal" name="canal" autofocus required>
 			<option selected value="">Elige una opción</option>
-			<option value="ANUNCIO FACEBOOK">ANUNCIO FACEBOOK</option>
-			<option value="PERFIL FACEBOOK">PERFIL FACEBOOK</option>
-			<option value="SITIO WEB">SITIO WEB</option>
-			<option value="TELÉFONO">TELÉFONO</option>
-			<option value="EVENTO">EVENTO</option>
-			<option value="ADWORDS">ADWORDS</option>
+			<option value="0">0 - 25</option>
+			<option value="1">26 - 45</option>
+			<option value="2">46 - 80</option>
+			<option value="3">81 - 100</option>
+			<option value="4">101 - 150</option>
+			<option value="5">151 - 200</option>
+			<option value="5">200 - 250</option>
 		</select> <br /> <br /> <label>TIEMPO DE RECORRIDO ASIGNADO: </label>
 		<select class="form-control" id="tienda" name="tienda" required>
 			<option selected value="">Elige una opción</option>
-			<option value="Suficiente">Suficientee</option>
-			<option value="...">...</option>
-			<option value="...">...</option>
-			<option value="...">...</option>
-			<option value="....">....</option>
-			<option value=".....">.......</option>
-		</select> <br> <input class="btn btn-primary" type="submit"
-			name="submit" value="Enviar"> <br>
+			<option value="0">Suficiente</option>
+			<option value="1">Insuficiente</option>
+			<option value="2">Mayor al necesario</option>
+		</select> <br> 
+		<input class="btn btn-primary" type="submit"name="submit" value="Enviar">
+		<a href="./CuentaCliente.php" title="Regresar" class="btn btn-info" role="button">Regresar</a>
+		<br>
 	</form>
 	<br>
 </div>
