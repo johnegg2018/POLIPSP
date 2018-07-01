@@ -8,7 +8,7 @@ if (! isset ( $_SESSION ["nombre"] )) {
 <div id="welcome">
 	<img src="imagenes/sitp.jpg"
 		style="max-width: 15%; width: auto; height: auto;"> <img
-		src="imagenes/PASAJERO.jpg"
+		src="imagenes/pasajero.png"
 		style="max-width: 10%; width: 30; height: 30;">
 	<h2>Bienvenido <?php echo $_SESSION["nombre"]?> <span> </span>
 	</h2>
@@ -29,7 +29,7 @@ if (! isset ( $_SESSION ["nombre"] )) {
 			<option value="T11">T11</option>
 			<option value="P49">P49</option>
 			<option value="736">736</option>
-		</select> <br /> <br /> <label>Seleccione los dÃ­as que usa el
+		</select> <br /> <br /> <label>Seleccione los días que usa el
 			servicio de la ruta indicada: </label> <select class="form-control"
 			id="canal" name="canal" autofocus required> Lunes
 			<input type="checkbox" name="diasem[]" value="Lunes" /> Martes
@@ -72,8 +72,7 @@ if (! isset ( $_SESSION ["nombre"] )) {
 			<option value="51-60 Min">51-60 Min</option>
 			<option value="61-80 Min">61-80 Min</option>
 			<option value="81 Min o mas">81 Min o mas</option>
-		</select> <br /> <br /> <label>Logra usted identificar los paraderos
-			donde puede tomar el servicio facilmente: </label> <select
+		</select> <br /> <br /> <label>En un rango del 1 al 10. ¿cómo califica el servicio?: </label> <select
 			class="form-control" id="tienda" name="tienda" required>
 			<option selected value="">Elige una opciÃ³n</option>
 			<option value="SI">Si</option>
