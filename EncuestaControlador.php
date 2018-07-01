@@ -20,8 +20,8 @@ if (! isset ( $_SESSION ["nombre"] )) {
 	</p>
 	<form method="post"
 		action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-		<label>RUTA: </label> <select class="form-control" id="canal"
-			name="canal" autofocus required>
+		<label>RUTA: </label> <select class="form-control" id="ruta"
+			name="ruta" autofocus required>
 			<option selected value="">Elige una opci&oacute;n</option>
 			<option value="P500">P500</option>
 			<option value="SE10">SE10</option>
@@ -40,33 +40,33 @@ if (! isset ( $_SESSION ["nombre"] )) {
 			<option value="210">210</option>
 		</select> <br /> <br /> <label>¿El tiempo de recorrido en general
 			asignado para la ruta es el adecuado? </label> <select
-			class="form-control" id="tienda" name="tienda" required>
+			class="form-control" id="tiempo" name="tiempo" required>
 			<option selected value="">Elige una opción</option>
 			<option value="SI">Si</option>
 			<option value="NO">No</option>
 		</select> <br /> <br /> <label>¿El intervalo según la ocupación de la
 			ruta es el indicado? </label> <select class="form-control"
-			id="tienda" name="tienda" required>
+			id="intervalo" name="intervalo" required>
 			<option selected value="">Elige una opción</option>
 			<option value="SI">Si</option>
 			<option value="NO">No</option>
 		</select> <br /> <br /> <label>¿Los operadores conocen la ruta y
 			atienden todas las paradas?: </label> <select class="form-control"
-			id="tienda" name="tienda" required>
+			id="atencion_paradas" name="atencion_paradas" required>
 			<option selected value="">Elige una opción</option>
-			<option value="0">Todos</option>
-			<option value="1">La mayor parte</option>
-			<option value="2">Solo unos pocos</option>
-			<option value="3">Ninguno</option>
+			<option value="Todos">Todos</option>
+			<option value="La mayor parte">La mayor parte</option>
+			<option value="Solo unos pocos">Solo unos pocos</option>
+			<option value="Ninguno">Ninguno</option>
 		</select> <br /> <br /> <label>¿La ruta tiene saltos en los tiempos no
 			programados que hacen cambiar la velocidad en la operación? </label>
-		<select class="form-control" id="tienda" name="tienda" required>
+		<select class="form-control" id="cambio_velocidad" name="cambio_velocidad" required>
 			<option selected value="">Elige una opción</option>
 			<option value="SI">Si</option>
 			<option value="NO">No</option>
 		</select> <br /> <br /> <label>¿Recibe usted quejas de los usuarios en
 			el punto de inicio del servicio? </label> <select
-			class="form-control" id="tienda" name="tienda" required>
+			class="form-control" id="quejas" name="quejas" required>
 			<option selected value="">Elige una opción</option>
 			<option value="SI">Si</option>
 			<option value="NO">No</option>

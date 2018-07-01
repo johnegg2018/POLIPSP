@@ -18,7 +18,7 @@ $registros=mysqli_num_rows($validausuario);
         if($password == $contrasena)
         {
              $_SESSION["nombre"] = $nombre;
-            echo "<script>alert('USUARIO REGISTRADO'); window.location.assign('../CuentaCliente.php')</script>";
+            echo "<script>alert('USUARIO REGISTRADO: $nombre'); window.location.assign('../CuentaCliente.php')</script>";
         }
         else
         {

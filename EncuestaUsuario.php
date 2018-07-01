@@ -20,8 +20,8 @@ if (! isset ( $_SESSION ["nombre"] )) {
 	</p>
 	<form method="post"
 		action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-		<label>RUTA: </label> <select class="form-control" id="canal"
-			name="canal" autofocus required>
+		<label>RUTA: </label> <select class="form-control" id="ruta"
+			name="ruta" autofocus required>
 			<option selected value="">Elige una opci&oacute;n</option>
 			<option value="P500">P500</option>
 			<option value="SE10">SE10</option>
@@ -38,27 +38,26 @@ if (! isset ( $_SESSION ["nombre"] )) {
 			<option value="T91">T91</option>
 			<option value="330">330</option>
 			<option value="210">210</option>
-		</select> <br /> <br /> <label>Seleccione los días que usa el
-			servicio de la ruta indicada: </label> <select class="form-control"
-			id="canal" name="canal" autofocus required> Lunes
-			<input type="checkbox" name="diasem[]" value="Lunes" /> Martes
-			<input type="checkbox" name="diasem[]" value="Martes" /> Miercoles
-			<input type="checkbox" name="diasem[]" value="Miercoles" /> Jueves
-			<input type="checkbox" name="diasem[]" value="Jueves" /> Viernes
-			<input type="checkbox" name="diasem[]" value="Viernes" /> Sabado
-			<input type="checkbox" name="diasem[]" value="Sabado" /> Domingo
-			<input type="checkbox" name="diasem[]" value="Domingo" />
-		</select> <br /> <br /> <label>Logra usted identificar los paraderos
+		</select> <br /> <br /> <label>Seleccione los d&iacute;s que usa el
+			servicio de la ruta indicada: </label><br>
+			<input type="checkbox" name="diasem[]" value="Lunes" /> Lunes<br>
+			<input type="checkbox" name="diasem[]" value="Martes" /> Martes<br>
+			<input type="checkbox" name="diasem[]" value="Miercoles" /> Miercoles<br>
+			<input type="checkbox" name="diasem[]" value="Jueves" /> Jueves<br>
+			<input type="checkbox" name="diasem[]" value="Viernes" /> Viernes<br>
+			<input type="checkbox" name="diasem[]" value="Sabado" /> Sabado<br>
+			<input type="checkbox" name="diasem[]" value="Domingo" /> Domingo<br>
+		<br /> <br /> <label>Logra usted identificar los paraderos
 			donde puede tomar el servicio facilmente: </label> <select
-			class="form-control" id="tienda" name="tienda" required>
-			<option selected value="">Elige una opciÃ³n</option>
+			class="form-control" id="identificaPar" name="identificaPar" required>
+			<option selected value="">Elige una opci&oacute;n</option>
 			<option value="SI">Si</option>
 			<option value="NO">No</option>
 			<option value="No sabe">No sabe</option>
 		</select> <br /> <br /> <label>Piense en cuanto tiempo tarda
 			generalmente esperando el servicio: </label> <select
-			class="form-control" id="tienda" name="tienda" required>
-			<option selected value="">Elige una opciÃ³n</option>
+			class="form-control" id="tiempoEspera" name="tiempoEspera" required>
+			<option selected value="">Elige una opci&oacute;n</option>
 			<option value="0-10 Min">0-10 Min</option>
 			<option value="11-20 Min">11-20 Min</option>
 			<option value="21-30 Min">21-30 Min</option>
@@ -66,27 +65,34 @@ if (! isset ( $_SESSION ["nombre"] )) {
 			<option value="41 Min o mas">41 Min o mas</option>
 		</select> <br /> <br /> <label>Teniendo en cuenta las ultimas 5 veces
 			que uso el servicio de manera regular, Â¿Cuantas veces usted?: </label>
-		<select class="form-control" id="tienda" name="tienda" required>
-			<option selected value="">Elige una opciÃ³n</option>
+		<select class="form-control" id="estadoViaje" name="estadoViaje" required>
+			<option selected value="">Elige una opci&oacute;n</option>
 			<option value="Se fue ocupando una silla">Se fue ocupando una silla:</option>
 			<option value="Se fue de pie">Se fue de pie;</option>
 			<option value="Se sento despues de ir de pie">Se sento despues de ir
 				de pie</option>
 		</select> <br /> <br /> <label>4.3. Ahora indiquenos en cuanto tiempo
 			dura usted en su trayecto habitual en la ruta: </label> <select
-			class="form-control" id="tienda" name="tienda" required>
-			<option selected value="">Elige una opciÃ³n</option>
+			class="form-control" id="tiempoTrayecto" name="tiempoTrayecto" required>
+			<option selected value="">Elige una opci&oacute;n</option>
 			<option value="0-30 Min">0-30 Min</option>
 			<option value="31-50 Min">31-50 Min</option>
 			<option value="51-60 Min">51-60 Min</option>
 			<option value="61-80 Min">61-80 Min</option>
 			<option value="81 Min o mas">81 Min o mas</option>
 		</select> <br /> <br /> <label>En un rango del 1 al 10. ¿cómo califica el servicio?: </label> <select
-			class="form-control" id="tienda" name="tienda" required>
-			<option selected value="">Elige una opciÃ³n</option>
-			<option value="SI">Si</option>
-			<option value="NO">No</option>
-			<option value="No sabe">No sabe</option>
+			class="form-control" id="calificacionServ" name="calificacionServ" required>
+			<option selected value="">Elige una opci&oacute;n</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
 		</select> <br> <input class="btn btn-primary" type="submit"
 			name="submit" value="Enviar"> <br> <br>
 	</form>
