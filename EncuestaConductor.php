@@ -12,7 +12,7 @@ if (! isset ( $_SESSION ["nombre"] )) {
 	<h2>Bienvenido <?php echo $_SESSION["nombre"]?> <span> </span></h2>
 <div class="container">
 	<p>
-		<a href="index.php" class="btn btn-info" role="button">Cerrar Sesión</a>
+		<a href="index.php" class="btn btn-warning" role="button">Cerrar Sesión</a>
 		<a href="./CuentaCliente.php" title="Regresar" class="btn btn-info" role="button">Regresar</a>
 	</p>
 	<form method="post"
