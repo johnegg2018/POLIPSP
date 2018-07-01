@@ -8,7 +8,7 @@ if (! isset ( $_SESSION ["nombre"] )) {
 <div id="welcome">
 	<img src="imagenes/sitp.jpg"
 		style="max-width: 15%; width: auto; height: auto;"> <img
-		src="imagenes/CONTROLADOR.jpg"
+		src="imagenes/controlador.png"
 		style="max-width: 10%; width: 30; height: 30;">
 	<h2>Bienvenido <?php echo $_SESSION["nombre"]?> <span> </span>
 	</h2>

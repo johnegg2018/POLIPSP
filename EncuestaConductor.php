@@ -8,19 +8,15 @@ if (! isset ( $_SESSION ["nombre"] )) {
 <div id="welcome">
 	<img src="imagenes/sitp.jpg"
 		style="max-width: 15%; width: auto; height: auto;"> <img
-		src="imagenes/CONDUCTOR.jpg"
-		style="max-width: 10%; width: 30; height: 30;">
-	<h2>Bienvenido <?php echo $_SESSION["nombre"]?> <span> </span>
-	</h2>
-</div>
+		src="imagenes/CONDUCTOR.jpg" style="max-width: 8%; width: 30; height: 30;">
+	<h2>Bienvenido <?php echo $_SESSION["nombre"]?> <span> </span></h2>
 <div class="container">
 	<p>
 		Finalice sesion <a href="index.php">¡ aqui!</a>
 	</p>
 	<form method="post"
 		action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-		<label>RUTA: </label> <select class="form-control" id="canal"
-			name="canal" autofocus required>
+		<label>RUTA: </label> <select class="input form-control" id="canal" name="canal" autofocus required>
 			<option selected value="">Elige una opción</option>
 			<option value="P500">P500</option>
 			<option value="SE10">SE10</option>
@@ -52,7 +48,6 @@ if (! isset ( $_SESSION ["nombre"] )) {
 	</form>
 	<br>
 </div>
-<div class="container">
 <?php
 	
 	include ("includes/footer.php");
