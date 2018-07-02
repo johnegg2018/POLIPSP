@@ -1,25 +1,27 @@
 <?php
 session_start ();
 if (! isset ( $_SESSION ["nombre"] )) {
-	header ( "index.php" );
+	header ('Location: index.php');
 } else {
 	?>
 <?php include("includes/header.php"); ?>
+<div class="container">
 <div id="welcome">
 	<img src="imagenes/sitp.jpg"
 		style="max-width: 15%; width: auto; height: auto;"> <img
 		src="imagenes/pasajero.png"
 		style="max-width: 10%; width: 30; height: 30;">
-	<h2>Bienvenido <?php echo $_SESSION["nombre"]?> <span> </span>
-	</h2>
+	<h5>Bienvenido <?php echo $_SESSION["nombre"]?> <span> </span>
+	</h5>
+</div>
 </div>
 <div class="container">
 	<p>
 		<a href="index.php" class="btn btn-warning" role="button">Cerrar Sesión</a>
 		<a href="./CuentaCliente.php" title="Regresar" class="btn btn-info" role="button">Regresar</a>
 	</p>
-	<form method="post"
-		action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+	<h3>Encuesta Usuario</h3><br>
+	<form method="post" action="<?php echo htmlspecialchars('guardarEncuestaUsuario.php');?>">
 		<label>RUTA: </label> <select class="form-control" id="ruta"
 			name="ruta" autofocus required>
 			<option selected value="">Elige una opci&oacute;n</option>
@@ -67,8 +69,8 @@ if (! isset ( $_SESSION ["nombre"] )) {
 			que uso el servicio de manera regular, Â¿Cuantas veces usted?: </label>
 		<select class="form-control" id="estadoViaje" name="estadoViaje" required>
 			<option selected value="">Elige una opci&oacute;n</option>
-			<option value="Se fue ocupando una silla">Se fue ocupando una silla:</option>
-			<option value="Se fue de pie">Se fue de pie;</option>
+			<option value="Se fue ocupando una silla">Se fue ocupando una silla</option>
+			<option value="Se fue de pie">Se fue de pie</option>
 			<option value="Se sento despues de ir de pie">Se sento despues de ir
 				de pie</option>
 		</select> <br /> <br /> <label>4.3. Ahora indiquenos en cuanto tiempo
@@ -94,7 +96,7 @@ if (! isset ( $_SESSION ["nombre"] )) {
 			<option value="9">9</option>
 			<option value="10">10</option>
 		</select> <br> <input class="btn btn-primary" type="submit"
-			name="submit" value="Enviar"> <br> <br>
+			name="EnviarEncuestaUsuario" value="Enviar"> <br> <br>
 	</form>
 </div>
 <div class="container">

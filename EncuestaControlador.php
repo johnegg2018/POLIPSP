@@ -1,7 +1,7 @@
 <?php
 session_start ();
 if (! isset ( $_SESSION ["nombre"] )) {
-	header ( "index.php" );
+	header ('Location: index.php');
 } else {
 	?>
 <?php include("includes/header.php"); ?>
@@ -18,8 +18,8 @@ if (! isset ( $_SESSION ["nombre"] )) {
 		<a href="index.php" class="btn btn-warning" role="button">Cerrar Sesión</a>
 		<a href="./CuentaCliente.php" title="Regresar" class="btn btn-info" role="button">Regresar</a>
 	</p>
-	<form method="post"
-		action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+	<h3>Encuesta Controlador</h3><br>
+	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		<label>RUTA: </label> <select class="form-control" id="ruta"
 			name="ruta" autofocus required>
 			<option selected value="">Elige una opci&oacute;n</option>

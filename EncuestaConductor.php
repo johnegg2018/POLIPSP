@@ -1,7 +1,7 @@
 <?php
 session_start ();
 if (! isset ( $_SESSION ["nombre"] )) {
-	header ( "index.php" );
+	header ('Location: index.php');
 } else {
 	?>
 <?php include("includes/header.php"); ?>
@@ -9,12 +9,14 @@ if (! isset ( $_SESSION ["nombre"] )) {
 	<img src="imagenes/sitp.jpg"
 		style="max-width: 15%; width: auto; height: auto;"> <img
 		src="imagenes/CONDUCTOR.jpg" style="max-width: 8%; width: 30; height: 30;">
-	<h2>Bienvenido <?php echo $_SESSION["nombre"]?> <span> </span></h2>
+	<h5>Bienvenido <?php echo $_SESSION["nombre"]?> <span> </span></h5>
 <div class="container">
 	<p>
 		<a href="index.php" class="btn btn-warning" role="button">Cerrar Sesi&oacute;n</a>
 		<a href="./CuentaCliente.php" title="Regresar" class="btn btn-info" role="button">Regresar</a>
 	</p>
+	<hr>
+	<h3>Encuesta Conductor</h3><br>
 	<form method="post"	action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		<label>RUTA: </label> <select class="form-control" id="canal" name="ruta" autofocus required>
 			<option selected value="">Elige una opci&oacute;n</option>

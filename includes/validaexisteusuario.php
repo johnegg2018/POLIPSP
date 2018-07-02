@@ -11,6 +11,7 @@ $registros=mysqli_num_rows($validausuario);
          while($resultado = mysqli_fetch_array($validausuario)) 
         {
             $nombre = $resultado['nombre']." ".$resultado['apellido'];
+            $idUsuario = $resultado['id_usuario'];
             $id_doc = $resultado['cedula'];
     		$usuario = $resultado['usuario'];
     		$password = $resultado['password'];
@@ -18,6 +19,7 @@ $registros=mysqli_num_rows($validausuario);
         if($password == $contrasena)
         {
              $_SESSION["nombre"] = $nombre;
+             $_SESSION["idUsuario"] = $idUsuario;
             echo "<script>alert('USUARIO REGISTRADO: $nombre'); window.location.assign('../CuentaCliente.php')</script>";
         }
         else
