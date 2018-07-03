@@ -35,5 +35,7 @@ if (mysqli_query($con, $sql)) {
    	     echo 'Espere un momento y será redireccionado...'; 
 	ob_end_flush();  
 }
+
 mysqli_close($con);
+
 ?>
